@@ -18,5 +18,5 @@ The default replicas is 1. Each replica consumes 1CPU and 512m Memory.
 
 To increase to the amount of resources you want to donate you can scale up the number of replicas to the desired amount:
 ```
-kubectl scale --replicas=3 -f https://raw.githubusercontent.com/dionborsboom/k8s-covid19/master/deployment.yaml
+kubectl -n incentro-oss-fah scale --replicas=3 -f https://raw.githubusercontent.com/dionborsboom/k8s-covid19/master/deployment.yaml
 ```
