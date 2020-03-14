@@ -8,6 +8,9 @@ I though I would share my efforts in order to let other engineers use it. The de
 
 Also, when I was building this, I was thinking I will fork this later and make a permanent open source project. The goal of this open source project would be an operator that donates idle Kubernetes resources to projects like folding@home. More info on that to follow soon. The current project is more like a quick hack to get the cpu cycles going.
 
+If you have GPUs in your Kubernetes clusters, check out this repo: https://github.com/coreweave/fah-docker
+
+
 ## How to use
 Deploy:
 ```
