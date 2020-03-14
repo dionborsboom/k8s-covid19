@@ -1,0 +1,44 @@
+#namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: incentro-oss-fah
+
+---
+#deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: incentro-oss-fah
+  namespace: incentro-oss-fah
+  labels:
+    app: incentro-oss-fah
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: incentro-oss-fah
+  template:
+    metadata:
+      labels:
+        app: incentro-oss-fah
+    spec:
+      containers:
+      - name: incentro-oss-fah
+        image: gcr.io/incentro-oss/covid19:1.0
+        command: ["FAHClient"]
+        args:
+          - --user=Incentro
+          - --team=238318
+          - --gpu=false
+          - --smp=true
+          - --priority=low
+          - --cpu-usage=90
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "1"
+          limits:
+            memory: "512Mi"
+            cpu: "1"
