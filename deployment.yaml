@@ -30,7 +30,7 @@ spec:
         command: ["FAHClient"]
         args:
           - --user=Incentro
-          - --team=238318
+          - --team=239336
           - --gpu=false
           - --smp=true
           - --priority=low
